@@ -1,6 +1,7 @@
 function fetchIssues() {
 	var issues = JSON.parse(localStorage.getItem('issues'));
 	var issuesList = document.getElementById('issuesList');
+	console.log(issues);
 	
 	issues.innerHTML = '';
 	for (var i = 0; i < issues.length; i++) {
@@ -43,8 +44,8 @@ function saveIssue(e) {
 	}
 	else {
 		var issues = JSON.parse(localStorage.getItem('issues'));
-		issues.push(issues);
-		//localStorage.setItem('issues', JSON.stringify(issues));
+		issues.push(issue);
+		localStorage.setItem('issues', JSON.stringify(issues));
 	}
 
 	document.getElementById('issueInputForm').reset();
