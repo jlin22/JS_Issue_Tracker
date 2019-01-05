@@ -3,7 +3,7 @@ function fetchIssues() {
 	var issuesList = document.getElementById('issuesList');
 	console.log(issues);
 	
-	issues.innerHTML = '';
+	issuesList.innerHTML = '';
 	for (var i = 0; i < issues.length; i++) {
 		var id = issues[i].issueId;
 		var desc = issues[i].issueDesc;
